@@ -1,8 +1,13 @@
-import 'package:book_store_app_git/utils/colors.dart';
+import 'package:book_store_app_git/ui/bookmark/bookmark.dart';
+import 'package:book_store_app_git/ui/cate1/cate1.dart';
+import 'package:book_store_app_git/ui/home/home.dart';
+import 'package:book_store_app_git/ui/profile/profile.dart';
 import 'package:book_store_app_git/utils/icons.dart';
 import 'package:flashy_tab_bar2/flashy_tab_bar2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import 'utils/colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,12 +16,10 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
       theme: ThemeData(appBarTheme: AppBarTheme(color: ColorsApp.c_FFFFFF)),
       home: const MyHomePage(),
     );
@@ -32,12 +35,12 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
+  List pages = [HomePage(), CategoryPage(), BookmarkPage(), ProfilePage()];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // body:
-
+        body: pages[_selectedIndex],
         bottomNavigationBar: FlashyTabBar(
             selectedIndex: _selectedIndex,
             items: [
