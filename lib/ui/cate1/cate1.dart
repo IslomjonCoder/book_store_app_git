@@ -10,6 +10,5 @@ class CategoryPage extends StatelessWidget {
         child: Text('Category Page'),
       ),
     );
-    ;
   }
 }
