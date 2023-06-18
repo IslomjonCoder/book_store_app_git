@@ -30,4 +30,6 @@ class IconsApp {
   static const String book9 = 'assets/images/Rectangle_24.png';
   static const String book10 = 'assets/images/Rectangle_26.png';
   static const String book11 = 'assets/images/Rectangle_28.png';
+  static const String girl = 'assets/images/girl.png';
+
 }
