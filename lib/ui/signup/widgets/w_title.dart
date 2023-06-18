@@ -12,9 +12,9 @@ class WTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(title,style:  TextStyle(fontSize: 22.sp,fontWeight: FontWeight.w600,color: ColorsApp.c_000000,fontFamily: "Inter"),),
+        Text(title,style:  TextStyle(fontSize: 22.spMin,fontWeight: FontWeight.w600,color: ColorsApp.c_000000,fontFamily: "Inter"),),
         SizedBox(height: 4.h,),
-        Text(subtitle,style: TextStyle(fontSize: 11.sp,fontWeight: FontWeight.w400,color: ColorsApp.c_000000.withOpacity(.6)),),
+        Text(subtitle,style: TextStyle(fontSize: 11.spMin,fontWeight: FontWeight.w400,color: ColorsApp.c_000000.withOpacity(.6)),),
       ],
     );
   }

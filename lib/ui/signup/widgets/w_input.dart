@@ -9,24 +9,21 @@ class WInput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding:  EdgeInsets.symmetric(horizontal: 46.w),
-      child: TextField(
-        decoration: InputDecoration(
-          hintText: hintText,
-          hintStyle: TextStyle(
-            fontSize: 11.sp,
-            fontWeight: FontWeight.w400,
-            color: ColorsApp.c_000000.withOpacity(.6),
-            fontFamily: "Inter",
-          ),
-        ),
-        style:  TextStyle(
-            fontSize: 14.sp,
-          fontWeight: FontWeight.w500,
-          color: ColorsApp.c_000000,
+    return TextField(
+      decoration: InputDecoration(
+        hintText: hintText,
+        hintStyle: TextStyle(
+          fontSize: 11.spMin,
+          fontWeight: FontWeight.w400,
+          color: ColorsApp.c_000000.withOpacity(.6),
           fontFamily: "Inter",
         ),
+      ),
+      style:  TextStyle(
+          fontSize: 14.spMin,
+        fontWeight: FontWeight.w500,
+        color: ColorsApp.c_000000,
+        fontFamily: "Inter",
       ),
     );
   }

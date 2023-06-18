@@ -14,18 +14,15 @@ class WButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ZoomTapAnimation(
       onTap: onTab,
-      child: Padding(
-        padding:  EdgeInsets.symmetric(horizontal: 46.w),
-        child: Container(
-          height: 51.h,
-          width: 300.w,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(100.r),
-            color: ColorsApp.c_1E1E1E,
-          ),
-          child: Center(
-            child: Text(title,style: TextStyle(fontSize: 20.sp,fontWeight: FontWeight.w400,color: ColorsApp.c_FFFFFF),),
-          ),
+      child: Container(
+        height: 51.h,
+        width: 300.w,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(100.r),
+          color: ColorsApp.c_1E1E1E,
+        ),
+        child: Center(
+          child: Text(title,style: TextStyle(fontSize: 20.spMin,fontWeight: FontWeight.w400,color: ColorsApp.c_FFFFFF),),
         ),
       ),
     );

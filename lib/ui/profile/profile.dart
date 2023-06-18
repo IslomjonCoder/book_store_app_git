@@ -202,7 +202,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             child: Text(
                               "English (United States)",
                               style: TextStyle(
-                                fontSize: 9.sp,
+                                fontSize: 9.spMin,
                                 fontWeight: FontWeight.w400,
                               ),
                             ),
@@ -230,7 +230,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             child: Text(
                               "Uzbek",
                               style: TextStyle(
-                                fontSize: 9.sp,
+                                fontSize: 9.spMin,
                                 fontWeight: FontWeight.w400,
                               ),
                             ),

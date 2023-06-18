@@ -11,17 +11,35 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     double width = MediaQuery.of(context).size.width;
-    double  height = MediaQuery.of(context).size.height;
+    double height = MediaQuery.of(context).size.height;
 
     return Scaffold(
       body: Column(
         children: [
           Stack(
             children: [
-              Center(
-                child: Image.asset(IconsApp.background,width: width,height: height,),
+              Container(
+                height: height,width: width,
+                /// qarang Farrux aka katta lashganda rasm xunuk bo`lib qolyabdiku
+                /// shunaqa boladida siz ozi ja xammasiga tuwadigan qimoqchisizda uni xozir iloji yo manimcha sasab anu kitobdegi svg ham razmeri ozgarmayapdi
+                /// yechim sifatida shunga o`xshagan logika
+                /// xozi buni qande unga togirlesiz
+                /// hayronman
+                /// owancun xozircha ja chuqurlashmenda ozi bitta telefonga tuwib tursin xozircha
+                /// bo`ldi tushunarli shunday qilaveramiz
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage(IconsApp.background),
+                        fit: BoxFit.fill),
+                    // color: Colors.red,
+                ),
+                // child: Image.asset(
+                //   IconsApp.background,
+                //   fit: BoxFit.cover,
+                // width: width,
+                // height: height,
+                // ),
               ),
               SizedBox(
                 height: height,
@@ -30,32 +48,63 @@ class SplashScreen extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SizedBox(height: 200.h,),
+                      SizedBox(
+                        height: 200.h,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text("B",style: TextStyle(fontSize: 70.sp,fontWeight: FontWeight.w700,fontFamily: "Inter",color: ColorsApp.c_1E1E1E),),
-                          SizedBox(width: 10.h,),
+                          Text(
+                            "B",
+                            style: TextStyle(
+                                fontSize: 70.sp,
+                                fontWeight: FontWeight.w700,
+                                fontFamily: "Inter",
+                                color: ColorsApp.c_1E1E1E),
+                          ),
+                          SizedBox(
+                            width: 10.h,
+                          ),
                           SvgPicture.asset(IconsApp.iconBook),
-                          SizedBox(width: 10.h,),
-                          Text("K",style: TextStyle(fontSize: 70.sp,fontWeight: FontWeight.w700,fontFamily: "Inter",color: ColorsApp.c_1E1E1E),),
-
+                          SizedBox(
+                            width: 10.h,
+                          ),
+                          Text(
+                            "K",
+                            style: TextStyle(
+                                fontSize: 70.sp,
+                                fontWeight: FontWeight.w700,
+                                fontFamily: "Inter",
+                                color: ColorsApp.c_1E1E1E),
+                          ),
                         ],
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text("IO Book Store",style: TextStyle(fontSize: 22.sp,fontWeight: FontWeight.w400,fontFamily: "IM FELL Great Primer SC",color: ColorsApp.c_1E1E1E),),
-
+                          Text(
+                            "IO Book Store",
+                            style: TextStyle(
+                                fontSize: 22.sp,
+                                fontWeight: FontWeight.w400,
+                                fontFamily: "IM FELL Great Primer SC",
+                                color: ColorsApp.c_1E1E1E),
+                          ),
                         ],
                       ),
-                      SizedBox(height: 400.h,),
+                      SizedBox(
+                        height: 400.h,
+                      ),
                       ZoomTapAnimation(
-                        onTap: (){
-                          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const SignUpPage()));
+                        onTap: () {
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const SignUpPage()));
                         },
                         child: Container(
-                          padding: EdgeInsets.symmetric(vertical: 16.h,horizontal: 24.w),
+                          padding: EdgeInsets.symmetric(
+                              vertical: 16.h, horizontal: 24.w),
                           height: 54.h,
                           width: 315.w,
                           decoration: BoxDecoration(
@@ -64,9 +113,16 @@ class SplashScreen extends StatelessWidget {
                           ),
                           child: Row(
                             children: [
-                              Text("Get start",style: TextStyle(fontSize: 18.sp,fontWeight: FontWeight.w400,color: ColorsApp.c_1E1E1E,fontFamily: "Arial Rounded MT Bold"),),
-                             const Spacer(),
-                             Image.asset(IconsApp.next1),
+                              Text(
+                                "Get start",
+                                style: TextStyle(
+                                    fontSize: 18.sp,
+                                    fontWeight: FontWeight.w400,
+                                    color: ColorsApp.c_1E1E1E,
+                                    fontFamily: "Arial Rounded MT Bold"),
+                              ),
+                              const Spacer(),
+                              Image.asset(IconsApp.next1),
                             ],
                           ),
                         ),

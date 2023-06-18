@@ -1,3 +1,4 @@
+import 'package:book_store_app_git/ui/homescreen/homescreen.dart';
 import 'package:book_store_app_git/ui/signup/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -29,6 +30,7 @@ class LoginPage extends StatelessWidget {
             SizedBox(height: 11.h),
            const Divider(),
             Expanded(child: ListView(
+              padding: EdgeInsets.symmetric(horizontal: 46.w),
               physics: const BouncingScrollPhysics(),
               children: [
                 const WTitle(title: "Login Your Account", subtitle: "Please enter your info for login account"),
@@ -37,19 +39,20 @@ class LoginPage extends StatelessWidget {
                 SizedBox(height: 30.h,),
                 const WInput(hintText: "Last name"),
                 SizedBox(height: 30.h,),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 46.w),
-                  child: Row(
-                    children: [
-                     const Spacer(),
-                      ZoomTapAnimation(
-                          onTap: (){},
-                          child: Text("Forget password?",style: TextStyle(fontSize: 11.sp,fontWeight: FontWeight.w600,color: ColorsApp.c_FF0000.withOpacity(.6),fontFamily: "Inter"),)),
-                    ],
-                  ),
-                ),
+                /// QARANG MANA BU YERDA ROW SPACER NI O`RNIGA TEXT ALIGN RIGHT BERSA PASTDAGINI ISHINI QILADI
+                /// SHUNAQA QILIB KORINDA BIR
+                /// okk
+                /// padding nimau chun
+                /// tepada padding yoda wunchun anu widegt ga chiqarganlarimda bor
+                /// qarang unda widgetlardan olib tashlab bitta listview ni padding olsakchi
+                /// shunaqa qisayam bo'ladi
+                /// o`xshadi a
+                /// xa
+                ZoomTapAnimation(
+                    onTap: (){},
+                    child: Text("Forget password?",textAlign: TextAlign.right,style: TextStyle(fontSize: 11.sp,fontWeight: FontWeight.w600,color: ColorsApp.c_FF0000.withOpacity(.6),fontFamily: "Inter"),)),
                 SizedBox(height: 26.h,),
-                WButton(onTab: (){}, title: "Sign up"),
+                WButton(onTab: (){ Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const MyHomePage()));}, title: "Login"),
                 SizedBox(height: 260.h,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

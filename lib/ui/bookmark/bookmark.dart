@@ -36,6 +36,9 @@ class _BookmarkPageState extends State<BookmarkPage> {
             ),
             SizedBox(height: 11.h),
             Divider(),
+            /// mana bu kabi qilsakchi scroll bo`lmaydi keyin pastdagi yozuv ham ko`rinmay qolmaydi
+            /// sizedboxlar responsive bo`lgani uchun katta kichik qurilmalarda ham overflow bermaydi
+            /// shunaqa qilinchi unda
             Expanded(
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 26.w),
