@@ -19,15 +19,15 @@ class IconsApp {
   static const String background =
       "assets/images/green-leafed-plant-iphone-13-pro-max.jpg";
   // png
-  static const String book1 = 'assets/images/Rectangle 2.png';
-  static const String book2 = 'assets/images/Rectangle 5.png';
-  static const String book3 = 'assets/images/Rectangle 6.png';
-  static const String book4 = 'assets/images/Rectangle 7.png';
-  static const String book5 = 'assets/images/Rectangle 11.png';
-  static const String book6 = 'assets/images/Rectangle 12.png';
-  static const String book7 = 'assets/images/Rectangle 13.png';
-  static const String book8 = 'assets/images/Rectangle 23.png';
-  static const String book9 = 'assets/images/Rectangle 24.png';
-  static const String book10 = 'assets/images/Rectangle 26.png';
-  static const String book11 = 'assets/images/Rectangle 28.png';
+  static const String book1 = 'assets/images/Rectangle_2.png';
+  static const String book2 = 'assets/images/Rectangle_5.png';
+  static const String book3 = 'assets/images/Rectangle_6.png';
+  static const String book4 = 'assets/images/Rectangle_7.png';
+  static const String book5 = 'assets/images/Rectangle_11.png';
+  static const String book6 = 'assets/images/Rectangle_12.png';
+  static const String book7 = 'assets/images/Rectangle_13.png';
+  static const String book8 = 'assets/images/Rectangle_23.png';
+  static const String book9 = 'assets/images/Rectangle_24.png';
+  static const String book10 = 'assets/images/Rectangle_26.png';
+  static const String book11 = 'assets/images/Rectangle_28.png';
 }
