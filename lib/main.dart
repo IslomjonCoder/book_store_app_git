@@ -1,7 +1,10 @@
 import 'package:book_store_app_git/ui/bookmark/bookmark.dart';
 import 'package:book_store_app_git/ui/cate1/cate1.dart';
 import 'package:book_store_app_git/ui/home/home.dart';
+import 'package:book_store_app_git/ui/login/login.dart';
 import 'package:book_store_app_git/ui/profile/profile.dart';
+import 'package:book_store_app_git/ui/signup/signup.dart';
+import 'package:book_store_app_git/ui/splash/splash.dart';
 import 'package:book_store_app_git/utils/icons.dart';
 import 'package:flashy_tab_bar2/flashy_tab_bar2.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +27,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(appBarTheme: AppBarTheme(color: ColorsApp.c_FFFFFF)),
-        home: const MyHomePage(),
+        home: const SplashScreen(),
       ),
     );
   }

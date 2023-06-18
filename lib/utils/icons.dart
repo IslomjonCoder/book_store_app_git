@@ -14,12 +14,15 @@ class IconsApp {
   static const String search = 'assets/svg/search.svg';
   static const String send = 'assets/svg/send.svg';
   static const String user = 'assets/svg/user.svg';
+  static const String iconBook = 'assets/svg/icon_book.svg';
+  static const String next = 'assets/svg/next.svg';
 
   // jpg
   static const String background =
       "assets/images/green-leafed-plant-iphone-13-pro-max.jpg";
   // png
   static const String book1 = 'assets/images/Rectangle_2.png';
+  static const String next1 = 'assets/images/next2.png';
   static const String book2 = 'assets/images/Rectangle_5.png';
   static const String book3 = 'assets/images/Rectangle_6.png';
   static const String book4 = 'assets/images/Rectangle_7.png';
