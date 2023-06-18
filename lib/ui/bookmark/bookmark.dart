@@ -20,6 +20,7 @@ class _BookmarkPageState extends State<BookmarkPage> {
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
     return Scaffold(
       body: Center(
         child: Column(
@@ -42,17 +43,16 @@ class _BookmarkPageState extends State<BookmarkPage> {
                   children: [
                     SizedBox(height: 36.h),
                     SizedBox(
-                      // height: 35.h,
+                      height: height * 35 * 2 / 844,
                       child: TextField(
-                        // cursorHeight: 12,
-                        // textAlign: TextAlign.center,
                         textAlignVertical: TextAlignVertical.center,
                         style: TextStyle(
-                            // fontSize: 9.sp,
+                            fontSize: 14.sp,
                             fontWeight: FontWeight.w400,
                             color: ColorsApp.c_000000,
                             fontFamily: 'Inter'),
                         decoration: InputDecoration(
+                            contentPadding: EdgeInsets.symmetric(vertical: 5),
                             prefixIcon: Container(
                                 padding: EdgeInsets.all(10),
                                 child: SvgPicture.asset(
@@ -60,7 +60,7 @@ class _BookmarkPageState extends State<BookmarkPage> {
                                 )),
                             hintText: 'Search by name, author, bookworm...',
                             hintStyle: TextStyle(
-                                // fontSize: 9,
+                                fontSize: 14.sp,
                                 fontWeight: FontWeight.w400,
                                 color: ColorsApp.c_000000.withOpacity(.4),
                                 fontFamily: 'Inter'),
@@ -91,6 +91,7 @@ class _BookmarkPageState extends State<BookmarkPage> {
                                       mainAxisSpacing: 18.h),
                               itemBuilder: (context, index) {
                                 return Container(
+                                  clipBehavior: Clip.antiAlias,
                                   child: Stack(
                                     fit: StackFit.expand,
                                     children: [
