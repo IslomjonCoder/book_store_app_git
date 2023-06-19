@@ -3,6 +3,7 @@ import 'package:book_store_app_git/ui/cate1/cate1.dart';
 import 'package:book_store_app_git/ui/home/home.dart';
 import 'package:book_store_app_git/ui/profile/profile.dart';
 import 'package:book_store_app_git/utils/icons.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flashy_tab_bar2/flashy_tab_bar2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -10,8 +11,17 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'utils/colors.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+
+  runApp(
+      EasyLocalization(
+          supportedLocales: [Locale('en',), Locale('uz',)],
+          path: 'assets/translations',
+          fallbackLocale: Locale('en',),
+      child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -20,9 +30,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(390, 844),
+      designSize: Size(375, 812),
       builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: context.locale,
         theme: ThemeData(appBarTheme: AppBarTheme(color: ColorsApp.c_FFFFFF)),
         home: const MyHomePage(),
       ),
@@ -44,6 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
         body: pages[_selectedIndex],
         bottomNavigationBar: FlashyTabBar(
             selectedIndex: _selectedIndex,

@@ -1,4 +1,5 @@
 import 'package:book_store_app_git/ui/profile/widgets/textfield.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,7 +16,7 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
-  String selectedLanguage = "";
+  String selectedLanguage = "English";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,7 +68,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           SizedBox(
                             width: 5.w,
                           ),
-                          const Text("Personal info"),
+                          Text(tr("personal_info"),),
                         ],
                       )),
                   Positioned(
@@ -95,48 +96,48 @@ class _ProfilePageState extends State<ProfilePage> {
                     padding: EdgeInsets.only(top: 280.h),
                     child: Column(
                       children: [
-                        const GlobalTextField(
-                          hintText: "First Name",
+                        GlobalTextField(
+                          hintText: tr("first_name"),
                           keyboardType: TextInputType.name,
                           textInputAction: TextInputAction.next,
                         ),
                         SizedBox(
                           height: 15.h,
                         ),
-                        const GlobalTextField(
-                          hintText: "Last Name",
+                        GlobalTextField(
+                          hintText: tr("last_name"),
                           keyboardType: TextInputType.name,
                           textInputAction: TextInputAction.next,
                         ),
                         SizedBox(
                           height: 15.h,
                         ),
-                        const GlobalTextField(
-                          hintText: "Phone Number",
+                        GlobalTextField(
+                          hintText: tr("phone_number"),
                           keyboardType: TextInputType.number,
                           textInputAction: TextInputAction.next,
                         ),
                         SizedBox(
                           height: 15.h,
                         ),
-                        const GlobalTextField(
-                          hintText: "Password",
+                        GlobalTextField(
+                          hintText: tr("password"),
                           keyboardType: TextInputType.visiblePassword,
                           textInputAction: TextInputAction.next,
                         ),
                         SizedBox(
                           height: 15.h,
                         ),
-                        const GlobalTextField(
-                          hintText: "Email",
+                        GlobalTextField(
+                          hintText: tr("email"),
                           keyboardType: TextInputType.emailAddress,
                           textInputAction: TextInputAction.next,
                         ),
                         SizedBox(
                           height: 15.h,
                         ),
-                        const GlobalTextField(
-                          hintText: "Rule",
+                        GlobalTextField(
+                          hintText: tr("rule"),
                           keyboardType: TextInputType.name,
                           textInputAction: TextInputAction.done,
                         ),
@@ -164,9 +165,9 @@ class _ProfilePageState extends State<ProfilePage> {
                   SizedBox(
                     width: 5.w,
                   ),
-                  const Text(
-                    "Change language",
-                    style: TextStyle(fontWeight: FontWeight.w400, fontSize: 11),
+                  Text(
+                    tr("change_language"),
+                    style: const TextStyle(fontWeight: FontWeight.w400, fontSize: 11),
                   ),
                 ],
               ),
@@ -187,8 +188,11 @@ class _ProfilePageState extends State<ProfilePage> {
                       child: GestureDetector(
                         onTap: () {
                           setState(() {
-                            selectedLanguage = "English"; // Set selected language
-                          });
+                            selectedLanguage = "English";
+                          },);
+                          context.setLocale(
+                            const Locale("en"),
+                          );
                         },
                         child: Container(
                           height: 27.h,
@@ -215,8 +219,12 @@ class _ProfilePageState extends State<ProfilePage> {
                       child: GestureDetector(
                         onTap: () {
                           setState(() {
-                            selectedLanguage = "Uzbek"; // Set selected language
-                          });
+                            selectedLanguage = "Uzbek";
+                          }
+                          );
+                          context.setLocale(
+                            const Locale("uz"),
+                          );
                         },
                         child: Container(
                           height: 27.h,

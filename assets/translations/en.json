@@ -1,0 +1,11 @@
+{
+  "personal_info": "Personal info",
+  "first_name": "First Name",
+  "last_name": "Last Name",
+  "phone_number": "Phone Number",
+  "password": "Password",
+  "change": "change",
+  "email": "Email",
+  "rule": "Rule",
+  "change_language": "Change Language"
+}

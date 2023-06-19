@@ -1,0 +1,11 @@
+{
+  "personal_info": "Shaxsiy ma'lumotlar",
+  "first_name": "Isim",
+  "last_name": "Familiya",
+  "phone_number": "Telefon Raqam",
+  "password": "Parol",
+  "change": "o'zgartirish",
+  "email": "Elektron pochta",
+  "rule": "Qoida",
+  "change_language": "Tilni o'zgartirish"
+}

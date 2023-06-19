@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -64,7 +65,7 @@ class _GlobalTextFieldState extends State<GlobalTextField> {
             child: Container(
               padding: EdgeInsets.only(right: 15.w,top: 14.h),
               child: Text(
-                "change",
+                tr("change"),
                 style: TextStyle(
                   color: changeTextColor,
                 ),
