@@ -1,5 +1,5 @@
 import 'package:book_store_app_git/ui/bookmark/bookmark.dart';
-import 'package:book_store_app_git/ui/cate1/cate1.dart';
+import 'package:book_store_app_git/ui/category/category_screen.dart';
 import 'package:book_store_app_git/ui/home/home.dart';
 import 'package:book_store_app_git/ui/login/login.dart';
 import 'package:book_store_app_git/ui/profile/profile.dart';
