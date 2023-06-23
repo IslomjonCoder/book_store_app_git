@@ -46,7 +46,7 @@ class _BookmarkPageState extends State<BookmarkPage> {
                   children: [
                     SizedBox(height: 36.h),
                     SizedBox(
-                      height: height * 35 * 2 / 844,
+                      height: height * 45 / 844,
                       child: TextField(
                         textAlignVertical: TextAlignVertical.center,
                         style: TextStyle(

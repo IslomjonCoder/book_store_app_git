@@ -16,6 +16,7 @@ class IconsApp {
   static const String user = 'assets/svg/user.svg';
   static const String iconBook = 'assets/svg/icon_book.svg';
   static const String next = 'assets/svg/next.svg';
+  static const String categoryIcon = 'assets/svg/category_icon.svg';
 
   // jpg
   static const String background =
